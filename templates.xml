@@ -1,0 +1,23 @@
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="master_admin_form">
+            <field name="name">master_admin.form</field>
+            <field name="model">master.admin</field>
+            <field name="arch" type="xml">
+                <form string="master admin">
+                    <header>
+                    </header>
+                    <sheet>
+                        <button name="invalidate_all"  string="invalidate all" type="object"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_invalidate_all" model="ir.actions.act_window">
+            <field name="name">invalidate all</field>
+            <field name="res_model">master.admin</field>
+            <field name="view_mode">form</field>
+        </record>
+        <menuitem id="invalidate_all_menu" name="invalidate all" parent="base.menu_config" action="action_invalidate_all"/>
+    </data>
+</openerp>
